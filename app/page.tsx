@@ -1,15 +1,17 @@
 //import Navbar from "@/Components/Navbar";
-import Hero from "@/Components/Hero";
-import About from "@/Components/About";
-import Programs from "@/Components/Programs";
-import HowItWorks from "@/Components/HowItWorks";
-import Testimonials from "@/Components/Testimonials";
-import CTA from "@/Components/CTA";
-import Footer from "@/Components/Footer";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Programs from "@/components/Programs";
+import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <Hero />
       <About />
       <Programs />

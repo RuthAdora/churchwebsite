@@ -1,30 +1,36 @@
-import React from "react";
+// components/Navbar.tsx
+"use client";
 
-const Navbar = () => {
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+
+export default function Navbar() {
   return (
-    <div>
-      <nav className="w-full flex items-center justify-between px-6 py-4 border-b bg-white shadow-sm sticky top-0 z-50">
-        <div className="text-xl font-semibold">YourBrand</div>
-        <ul className="flex space-x-6 text-sm font-medium text-gray-700">
-          <li>
-            <a href="#about" className="hover:text-black">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-black">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-black">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
-};
+    <header className="w-full bg-white shadow-md sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-center">
+        <div className="flex items-center gap-6">
+          {/* Logo & Brand */}
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-lg font-bold text-gray-900 hidden sm:inline">
+              Favor & Mercy Church
+            </span>
+          </Link>
 
-export default Navbar;
+          {/* Navigation Links */}
+          <Button variant="ghost" asChild>
+            <Link href="/about">About</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/ministries">Ministries</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/contact">Contact</Link>
+          </Button>
+        </div>
+      </nav>
+      <Separator />
+    </header>
+  );
+}
