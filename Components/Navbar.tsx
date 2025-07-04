@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white shadow-md sticky top-0 z-50">
+    <header className="w-full bg-white shadow-md sticky top-0 z-50 scroll-smooth">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-center">
         <div className="flex items-center gap-6">
           {/* Logo & Brand */}
@@ -26,7 +26,24 @@ export default function Navbar() {
             <Link href="/ministries">Ministries</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="/contact">Contact</Link>
+            <Link href="#contact" scroll={false}>
+              Contact
+            </Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link
+              href="/inspiration"
+              className="text-yellow-600 font-semibold hover:underline underline-offset-4"
+            >
+              Inspiration
+            </Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/school">School</Link>
+          </Button>
+
+          <Button variant="ghost" asChild>
+            <Link href="/funding">Funding</Link>
           </Button>
         </div>
       </nav>
